@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>100 хоног хамтдаа - Дурсамжууд</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em 1em;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 12px;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+      padding: 2em 0;
+    }
+  </style>
+</head>
+<body>
+  <div style="padding: 1em; text-align: center;">
+    <a href="index.html" style="text-decoration: none; color: #ff69b4; font-size: 1.1em;">
+      ← Буцах
+    </a>
+  </div>
+  <header>
+    <h1>📸 Бидний дурсамжууд</h1>
+    <p>100 хоногийн хайр дүүрэн зургууд</p>
+  </header>
+  <div class="container">
+    <div class="gallery">
+      <a href="#img1"><img src="photo1.jpg" alt="Photo 1"></a>
+      <a href="#img2"><img src="photo2.jpg" alt="Photo 2"></a>
+      <a href="#img3"><img src="photo3.jpg" alt="Photo 3"></a>
+    </div>
+  </div>
+  <div id="img1" class="lightbox"><a href="#"><img src="photo1.jpg" alt=""></a></div>
+  <div id="img2" class="lightbox"><a href="#"><img src="photo2.jpg" alt=""></a></div>
+  <div id="img3" class="lightbox"><a href="#"><img src="photo3.jpg" alt=""></a></div>
+  <audio autoplay loop>
+    <source src="her_song.mp3" type="audio/mpeg">
+  </audio>
+  <footer>
+    &copy; 2025 Бид хоёрын хайрын дурсамж. Чамд зориулав. 💕
+  </footer>
+</body>
+</html>
